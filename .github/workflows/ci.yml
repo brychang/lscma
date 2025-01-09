@@ -31,3 +31,9 @@ jobs:
 
     - name: Run tests
       run: pytest
+    
+    - name: Build Sphinx Documentation
+      run: |
+        pip install sphinx sphinx-rtd-theme
+        cd docs
+        make html
