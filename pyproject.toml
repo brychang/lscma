@@ -1,0 +1,18 @@
+[project]
+name = "lscma"
+version = "0.0.1"
+authors = [
+  { name="Bryan Chang", email="bryanchang@berkeley.edu" },
+]
+description = "Package for light scanning confocal microscopy analysis."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/brychang/lscma"
+Issues = "https://github.com/brychang/lscma/issues"
