@@ -108,7 +108,7 @@ For more detailed examples, check the [examples directory](examples/).
 
 ## **Documentation**
 
-Comprehensive documentation is available [here](#). It includes:
+Comprehensive documentation is available [here](./docs/_build/html/index.html). It includes:
 
 - Installation instructions
 - API references
