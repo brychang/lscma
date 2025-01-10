@@ -1,28 +1,24 @@
-# Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
+import os
+import sys
+# Add the src directory to the sys.path so Sphinx can find your modules
+sys.path.insert(0, os.path.abspath('../src'))
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'lscma'
-copyright = '2025, Bryan Chang'
 author = 'Bryan Chang'
 release = '0.0.1'
+copyright = '2025, Bryan Chang'
 
 # -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',  # Core library for html generation from docstrings
+    'sphinx.ext.autosummary',  # Create neat summary tables
+    'sphinx_rtd_theme'
+]
+autosummary_generate = True  # Turn on sphinx.ext.autosummary
+html_theme = "sphinx_rtd_theme"
 
+# Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_theme = 'sphinx-rtd-theme'
-html_static_path = ['_static']

@@ -1,8 +1,9 @@
+"""Module for handling I/O operations related to the ZARR file format."""
 import zarr
 
 def read_zarr(path):
     """
-    Opens a Zarr file in read-only mode.
+    Open a Zarr file in read-only mode.
 
     Parameters:
     - path (str): Path to the Zarr file.
@@ -14,7 +15,7 @@ def read_zarr(path):
 
 def write_zarr(path, data, key):
     """
-    Writes data to a Zarr file under the specified key.
+    Write data to a Zarr file under the specified key.
 
     Parameters:
     - path (str): Path to the Zarr file.

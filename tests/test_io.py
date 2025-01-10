@@ -19,7 +19,7 @@ def temp_csv_file():
 
 @pytest.fixture
 def temp_nx_file():
-    temp_path = Path("temp_test_file.pkl")
+    temp_path = Path("temp_test_file.nx")
     yield temp_path
     if temp_path.exists():
         temp_path.unlink()
