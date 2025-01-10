@@ -25,7 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -e .
-        pip show sphinx  # Verify Sphinx is installed
+        pip install .[dev]  # Install dev dependencies including sphinx
 
     - name: Install test dependencies
       run: pip install pytest
