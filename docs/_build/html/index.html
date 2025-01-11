@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSCMA: Light Scanning Confocal Microscopy Analysis &mdash; lscma 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="lscma" href="_autosummary/lscma.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            lscma
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="_autosummary/lscma.html">lscma</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">lscma</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><strong>LSCMA: Light Scanning Confocal Microscopy Analysis</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lscma-light-scanning-confocal-microscopy-analysis">
+<h1><strong>LSCMA: Light Scanning Confocal Microscopy Analysis</strong><a class="headerlink" href="#lscma-light-scanning-confocal-microscopy-analysis" title="Link to this heading"></a></h1>
+<img alt="License Badge" src="https://img.shields.io/badge/license-MIT-green" />
+<img alt="Python Version Badge" src="https://img.shields.io/badge/python-3.8%2B-blue" />
+<img alt="Build Status Badge" src="https://img.shields.io/badge/build-passing-brightgreen" />
+<section id="overview">
+<h2><strong>Overview</strong><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><strong>NOTICE</strong>: This placeholder description was written by ChatGPT and should be reviewed and updated by the project maintainers to ensure accuracy and completeness.</p>
+<p><cite>lscma</cite> (Light Scanning Confocal Microscopy Analysis) is a Python package for analyzing large datasets generated from light scanning confocal microscopy (LSCM). The package provides tools to streamline workflows, including:</p>
+<ul class="simple">
+<li><p><strong>Data Preprocessing</strong>: Import, reorganize, and store 4D microscopy datasets as <cite>.zarr</cite> files for efficient handling.</p></li>
+<li><p><strong>Segmentation</strong>: Apply segmentation algorithms like PlantSeg to extract cellular regions.</p></li>
+<li><p><strong>Graph-Based Analysis</strong>: Convert segmented images into graph representations (NetworkX), with nodes representing cells and edges denoting physical interactions.</p></li>
+<li><p><strong>Classification</strong>: Classify cells using KNN, random forests, and emerging techniques like graph neural networks (GNNs).</p></li>
+<li><p><strong>Visualization</strong>: Extend tools like Napari for interactive visualization and annotation.</p></li>
+</ul>
+<p>Although designed with pancreatic islets in mind, the package is flexible enough to be adapted for other tissues and research contexts.</p>
+</section>
+<hr class="docutils" />
+<section id="features">
+<h2><strong>Features</strong><a class="headerlink" href="#features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>File Handling</strong></p>
+<ul>
+<li><p>Read proprietary Carl Zeiss <cite>.czi</cite> files and extract metadata.</p></li>
+<li><p>Reorganize datasets into <cite>.zarr</cite> format for efficient storage and analysis.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Processing</strong></p>
+<ul>
+<li><p>Apply segmentation algorithms (e.g., PlantSeg).</p></li>
+<li><p>Generate metadata-rich Pandas DataFrames linking tissue samples to their properties.</p></li>
+</ul>
+</li>
+<li><p><strong>Graph Representations</strong></p>
+<ul>
+<li><p>Convert segmented images into graph structures with detailed node and edge attributes.</p></li>
+<li><p>Analyze tissue organization using graph metrics.</p></li>
+</ul>
+</li>
+<li><p><strong>Classification</strong></p>
+<ul>
+<li><p>Classify cells using built-in methods or integrate new machine learning models.</p></li>
+</ul>
+</li>
+<li><p><strong>Visualization</strong></p>
+<ul>
+<li><p>Interactive visualization with Napari, including annotation capabilities.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="installation">
+<h2><strong>Installation</strong><a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p><strong>Dependencies</strong>
+<cite>lscma</cite> requires Python 3.8 or later. Key dependencies include:</p>
+<ul class="simple">
+<li><p><cite>numpy</cite></p></li>
+<li><p><cite>scipy</cite></p></li>
+<li><p><cite>pandas</cite></p></li>
+<li><p><cite>zarr</cite></p></li>
+<li><p><cite>networkx</cite></p></li>
+<li><p><cite>napari</cite></p></li>
+<li><p><cite>plantseg</cite></p></li>
+<li><p><cite>sklearn</cite></p></li>
+</ul>
+<p>To install, clone the repository and install the package using <cite>pip</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/brychang/lscma.git
+<span class="nb">cd</span><span class="w"> </span>lscma
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="usage">
+<h2><strong>Usage</strong><a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p><strong>Example Workflow</strong></p>
+<p>Below is a simplified pipeline for analyzing pancreatic islet tissue samples:</p>
+<ol class="arabic">
+<li><p><strong>Reorganize Raw Data</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">lscma.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">czi_reader</span><span class="p">,</span> <span class="n">zarr_writer</span>
+<span class="n">raw_data</span> <span class="o">=</span> <span class="n">czi_reader</span><span class="o">.</span><span class="n">load_czi</span><span class="p">(</span><span class="s2">&quot;path/to/file.czi&quot;</span><span class="p">)</span>
+<span class="n">zarr_writer</span><span class="o">.</span><span class="n">save_as_zarr</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="s2">&quot;path/to/output.zarr&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Segmentation</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">lscma.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">segmentation</span>
+<span class="n">segmentation</span><span class="o">.</span><span class="n">apply_plantseg</span><span class="p">(</span><span class="s2">&quot;path/to/output.zarr&quot;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="s2">&quot;plantseg_config.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Graph Representation</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">lscma.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="n">graph_utils</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graph_utils</span><span class="o">.</span><span class="n">create_cell_graph</span><span class="p">(</span><span class="s2">&quot;path/to/output.zarr&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Classification</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">lscma.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="n">classification</span>
+<span class="n">classified_graph</span> <span class="o">=</span> <span class="n">classification</span><span class="o">.</span><span class="n">knn_classifier</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Visualization</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">lscma.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="n">visualization</span>
+<span class="n">visualization</span><span class="o">.</span><span class="n">plot_graph</span><span class="p">(</span><span class="n">classified_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>For more detailed examples, check the <a class="reference external" href="https://github.com/brychang/lscma/blob/main/examples">examples directory</a>.</p>
+</section>
+<hr class="docutils" />
+<section id="documentation">
+<h2><strong>Documentation</strong><a class="headerlink" href="#documentation" title="Link to this heading"></a></h2>
+<p>Comprehensive documentation is available <a class="reference external" href="./docs/index.html">here</a>. It includes:</p>
+<ul class="simple">
+<li><p>Installation instructions</p></li>
+<li><p>API references</p></li>
+<li><p>Example workflows</p></li>
+<li><p>Advanced usage and configuration</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="contributing">
+<h2><strong>Contributing</strong><a class="headerlink" href="#contributing" title="Link to this heading"></a></h2>
+<p>Contributions are welcome! If you find a bug, have a feature request, or want to contribute code, please:</p>
+<ol class="arabic">
+<li><p>Fork the repository.</p></li>
+<li><p>Create a feature branch:
+.. code-block:: bash</p>
+<blockquote>
+<div><p>git checkout -b feature/my-feature</p>
+</div></blockquote>
+</li>
+<li><p>Submit a pull request.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="license">
+<h2><strong>License</strong><a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>This project is licensed under the MIT License. See the <a class="reference external" href="https://github.com/brychang/lscma/blob/main/LICENSE">LICENSE</a> file for details.</p>
+</section>
+<hr class="docutils" />
+<section id="acknowledgments">
+<h2><strong>Acknowledgments</strong><a class="headerlink" href="#acknowledgments" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>PlantSeg developers for their segmentation tools.</p></li>
+<li><p>Napari for interactive visualization capabilities.</p></li>
+<li><p>Contributors to scientific Python libraries like NumPy, SciPy, and NetworkX.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="detailed-api-reference">
+<h2>Detailed API Reference<a class="headerlink" href="#detailed-api-reference" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/lscma.html#module-lscma" title="lscma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lscma</span></code></a></p></td>
+<td><p>This is the analysis module for LSCMA.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="_autosummary/lscma.html" class="btn btn-neutral float-right" title="lscma" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Bryan Chang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
