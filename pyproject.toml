@@ -16,7 +16,8 @@ classifiers = [
 dependencies = [
     "pandas",
     "networkx",
-    "zarr"
+    "zarr",
+    "napari"
 ]
 
 [project.optional-dependencies]

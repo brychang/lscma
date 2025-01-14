@@ -1,6 +1,7 @@
 pandas
 networkx
 zarr
+napari
 pytest  # For testing
 sphinx
 sphinx-rtd-theme
