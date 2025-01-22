@@ -1,7 +1,8 @@
 pandas
 networkx
 zarr
-napari
+matplotlib
+napari[all]
 pytest  # For testing
 sphinx
 sphinx-rtd-theme
