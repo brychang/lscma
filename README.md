@@ -6,6 +6,8 @@
 
 ## **Overview**
 
+**NOTICE**: This is only public because Github restricts Github Pages to public repositories. I am using this project to explore writing a python package.
+
 **NOTICE**: This placeholder description was written by ChatGPT and should be reviewed and updated by the project maintainers to ensure accuracy and completeness.
 
 `lscma` (Light Scanning Confocal Microscopy Analysis) is a Python package for analyzing large datasets generated from light scanning confocal microscopy (LSCM). The package provides tools to streamline workflows, including:
