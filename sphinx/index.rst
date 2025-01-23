@@ -146,6 +146,7 @@ Contributions are welcome! If you find a bug, have a feature request, or want to
 
 1. Fork the repository.
 2. Create a feature branch:
+
    .. code-block:: bash
       
       git checkout -b feature/my-feature
