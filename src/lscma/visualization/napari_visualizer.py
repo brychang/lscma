@@ -6,16 +6,51 @@ from matplotlib import cm
 from matplotlib.patches import Patch
 
 class NapariViewer:
+    """
+    This class contains the napari visualization.
+    It can visualize arrays as images or labels.
+    It can visualize networkx graphs.
+    """
     def __init__(self):
+        """
+        Initializes the Napari viewer.
+        """
         self.viewer = napari.Viewer()
 
     def visualize_image(self, array):
+        """
+        Visualizes a 2D or 3D image array in the Napari viewer.
+        
+        Parameters:
+        -----------
+        array : numpy.ndarray
+            The image data to be visualized.
+        """
         self.viewer.add_image(array)
 
     def visualize_label(self, array):
+        """
+        Visualizes a label array (for segmentation) in the Napari viewer.
+        
+        Parameters:
+        -----------
+        array : numpy.ndarray
+            The label data (segmentation or classification labels) to be visualized.
+        """
         self.viewer.add_labels(array)
 
     def visualize_graph(self, graph, label):
+        """
+        Visualizes a networkx graph in the Napari viewer, where nodes are displayed as points 
+        and labeled with distinct colors. It also displays a legend for the labels.
+        
+        Parameters:
+        -----------
+        graph : networkx.Graph
+            The graph whose nodes and edges will be visualized.
+        label : str
+            The attribute name in the graph nodes used for labeling and coloring the nodes.
+        """
         positions = np.array([data['center_of_mass'] for node, data in graph.nodes(data=True)])
         labels = [data[label] for node, data in graph.nodes(data=True)]
 
